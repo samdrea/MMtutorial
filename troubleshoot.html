@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troubleshoot - OpenFlexure Tutorial</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .accordion {
+            background-color: #444;
+            color: #fff;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.2em;
+            transition: 0.4s;
+            margin-bottom: 10px;
+        }
+
+        .accordion.active, .accordion:hover {
+            background-color: #555;
+        }
+
+        .panel {
+            padding: 0 10px;
+            display: none;
+            background-color: white;
+            overflow: hidden;
+        }
+
+        .panel p {
+            padding: 10px;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="setup.html">Set-Up</a></li>
+            <li><a href="usage.html">Usage</a></li>
+            <li><a href="troubleshoot.html">Troubleshoot</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Troubleshoot</h1>
+        <h2>UNDER CONSTRUCTION...</h2>
+        <button class="accordion">Question 1</button>
+        <div class="panel">
+            <p>Answer to question 1.</p>
+        </div>
+
+        <button class="accordion">Question 2</button>
+        <div class="panel">
+            <p>Answer to question 2.</p>
+        </div>
+
+        <button class="accordion">Question 3</button>
+        <div class="panel">
+            <p>Answer to question 3.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Samdrea Hsu</p>
+    </footer>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        for (var i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
